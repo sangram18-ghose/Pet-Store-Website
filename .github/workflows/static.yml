@@ -31,21 +31,15 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: '.'
-	              - name: Generate html pages for custom Go import paths
-  # You may pin to the exact commit or the version.
-  # uses: nhatthm/govanityrender-action@7f910007de42a1386d9a40600b4793a05ed39447
-  uses: nhatthm/govanityrender-action@v0.3.0
-  with:
-    # Path to config file
-    config: # optional, default is config.json
-    # Path to homepage template
-    homepage-template: # optional
-    # A comma-separated list of modules to be rebuilt
-    modules: # optional
-    # Output directory that contains the generated html files
-    output: # optional, default is build
-          
       
+      - name: Generate html pages for custom Go import paths
+        uses: nhatthm/govanityrender-action@v0.3.0
+        with:
+          config: # optional, default is config.json
+          homepage-template: # optional
+          modules: # optional
+          output: # optional, default is build
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
