@@ -12,25 +12,40 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
     environment:
       name: github-pages
-	@@ -31,13 +23,15 @@ jobs:
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@v3
+      
       - name: Setup Pages
-        uses: actions/configure-pages@v5
-
+        uses: actions/configure-pages@v2
+      
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: '.'
-
+	              - name: Generate html pages for custom Go import paths
+  # You may pin to the exact commit or the version.
+  # uses: nhatthm/govanityrender-action@7f910007de42a1386d9a40600b4793a05ed39447
+  uses: nhatthm/govanityrender-action@v0.3.0
+  with:
+    # Path to config file
+    config: # optional, default is config.json
+    # Path to homepage template
+    homepage-template: # optional
+    # A comma-separated list of modules to be rebuilt
+    modules: # optional
+    # Output directory that contains the generated html files
+    output: # optional, default is build
+          
+      
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v1
