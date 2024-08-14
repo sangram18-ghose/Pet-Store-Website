@@ -1,4 +1,3 @@
-
 on:
   push:
     branches: ["main"]
@@ -31,14 +30,6 @@ jobs:
         with:
           path: '.'
       
-      - name: Generate html pages for custom Go import paths
-        uses: nhatthm/govanityrender-action@v0.3.0
-        with:
-          config: # optional, default is config.json
-          homepage-template: # optional
-          modules: # optional
-          output: # optional, default is build
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
