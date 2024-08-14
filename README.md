@@ -49,4 +49,4 @@ trimming, and a pampering spa day—book now!
   · Enjoy free delivery on orders over ₹3,000, making your shopping experience even more convenient.
 
 · Customer Support:
-  · Responsive customer service to assist with inquiries, product, recommendations, and order-related questions
+  · Responsive customer service to assist with inquiries, product, recommendations, and order-related questions.
