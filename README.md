@@ -1,5 +1,6 @@
 # Project-Overview
 · Technology Stack: Developed a structured, visually appealing website using HTML and CSS.
+
 · User-Centric Design: Delivers an engaging experience for pet lovers.
 · Functionality: Merges attractive design with useful tools for effortless browsing and buying.
 · Target Audience: Serves pet owners, animal lovers, and quality product seekers.
